@@ -1,0 +1,76 @@
+# Student Data API
+
+This project provides a simple Express.js API to access student data stored in a PostgreSQL database.
+
+## Overview
+
+The API serves data from several tables related to different aspects of student information:
+
+- Academic
+- Career
+- Demographic
+- Financial
+- General
+- Health
+
+## Dummy Data
+
+This repository includes a `Dummy-Data/` directory containing CSV files used to populate the database tables with sample data. These files were used for initial setup and testing.
+
+## API Endpoints
+
+The following GET endpoints are available:
+
+- `/api/academic`: Retrieves data from the `student_academic` table.
+- `/api/career`: Retrieves data from the `student_career` table.
+- `/api/demographic`: Retrieves data from the `student_demographic` table.
+- `/api/financial`: Retrieves data from the `student_financial` table.
+- `/api/general`: Retrieves data from the `student_general` table.
+- `/api/health`: Retrieves data from the `student_health` table.
+
+## Live API Endpoints
+
+The following endpoints are publicly accessible with the live data:
+
+- General: [http://18.117.12.198:5001/api/general](http://18.117.12.198:5001/api/general)
+- Demographic: [http://18.117.12.198:5001/api/demographic](http://18.117.12.198:5001/api/demographic)
+- Health: [http://18.117.12.198:5001/api/health](http://18.117.12.198:5001/api/health)
+- Financial: [http://18.117.12.198:5001/api/financial](http://18.117.12.198:5001/api/financial)
+- Career: [http://18.117.12.198:5001/api/career](http://18.117.12.198:5001/api/career)
+- Academic: [http://18.117.12.198:5001/api/academic](http://18.117.12.198:5001/api/academic)
+
+## Setup
+
+1.  **Clone the repository:**
+    ```bash
+    git clone git@github.com:cliftonbnoble/student-data-api.git
+    cd student-data-api
+    ```
+2.  **Install dependencies:** (Assuming Node.js setup)
+    ```bash
+    npm install
+    ```
+    _Note: You might need to create a `package.json` if you haven't already._
+3.  **Set up PostgreSQL Database:**
+    - Ensure you have PostgreSQL running.
+    - Create a database (e.g., `student-data-db`).
+    - Create the necessary tables using the SQL schema provided or inferred from the CSV headers.
+    - Load the data from the CSV files in the `Dummy-Data/` directory into the corresponding tables (e.g., using `psql`'s `\copy` command).
+4.  **Configure Environment Variables:**
+    - Create a `.env` file in the `school-data-api/` directory.
+    - Add the following variables, replacing the values with your actual database credentials:
+      ```env
+      DB_USER=your_db_user
+      DB_HOST=your_db_host
+      DB_DATABASE=your_db_name
+      DB_PASSWORD=your_db_password
+      DB_PORT=your_db_port
+      PORT=5001 # Or any port you prefer for the API
+      ```
+5.  **Start the API:**
+    ```bash
+    cd school-data-api
+    node index.js
+    ```
+
+The API should now be running, typically on `http://localhost:5001`.
