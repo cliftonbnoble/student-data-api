@@ -13,6 +13,10 @@ The API serves data from several tables related to different aspects of student 
 - General
 - Health
 
+## Data Structure
+
+The primary key linking all tables is `student_id_number`. While this key can be used to join information across different tables for a single student, please note that the data provided is generic dummy data. Consequently, the combined information for any given `student_id_number` may not always represent a realistic or logically consistent student profile.
+
 ## Dummy Data
 
 This repository includes a `Dummy-Data/` directory containing CSV files used to populate the database tables with sample data. These files were used for initial setup and testing.
@@ -32,12 +36,12 @@ The following GET endpoints are available:
 
 The following endpoints are publicly accessible with the live data:
 
-- General: [http://18.117.12.198:5001/api/general](http://18.117.12.198:5001/api/general)
-- Demographic: [http://18.117.12.198:5001/api/demographic](http://18.117.12.198:5001/api/demographic)
-- Health: [http://18.117.12.198:5001/api/health](http://18.117.12.198:5001/api/health)
-- Financial: [http://18.117.12.198:5001/api/financial](http://18.117.12.198:5001/api/financial)
-- Career: [http://18.117.12.198:5001/api/career](http://18.117.12.198:5001/api/career)
-- Academic: [http://18.117.12.198:5001/api/academic](http://18.117.12.198:5001/api/academic)
+- General: [https://api.stonecreekforms.link/api/general](https://api.stonecreekforms.link/api/general)
+- Demographic: [https://api.stonecreekforms.link/api/demographic](https://api.stonecreekforms.link/api/demographic)
+- Health: [https://api.stonecreekforms.link/api/health](https://api.stonecreekforms.link/api/health)
+- Financial: [https://api.stonecreekforms.link/api/financial](https://api.stonecreekforms.link/api/financial)
+- Career: [https://api.stonecreekforms.link/api/career](https://api.stonecreekforms.link/api/career)
+- Academic: [https://api.stonecreekforms.link/api/academic](https://api.stonecreekforms.link/api/academic)
 
 ## Setup
 
