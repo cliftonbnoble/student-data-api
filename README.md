@@ -1,6 +1,6 @@
 # Student Data API
 
-This project provides a simple Express.js API to access student data stored in a PostgreSQL database.
+This project provides a simple Express.js API to access (Dummy) student data stored in a PostgreSQL database on our free AWS Tier.
 
 ## Overview
 
